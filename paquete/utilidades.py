@@ -17,3 +17,11 @@ def leer_número_entero(msj: str) -> int:
             return numero
         except ValueError:
             print('Debe escribir un número entero...')
+            
+def leer_número_decimal(msj: str) -> float:
+    while True:
+        try:
+            numero: float = float(input(f'{msj}: '))
+            return numero
+        except ValueError:
+            print('Debe escribir un número...')
