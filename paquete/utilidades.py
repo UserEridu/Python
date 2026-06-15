@@ -25,3 +25,12 @@ def leer_número_decimal(msj: str) -> float:
             return numero
         except ValueError:
             print('Debe escribir un número...')
+            
+
+def leer_texto(msj: str, aviso: str) -> str:
+    while True:
+        texto: str = input(f'{msj}: ')
+        if texto.strip():
+            return texto.strip()
+        else:
+            print(f'Debe escribir {aviso} ok.')
