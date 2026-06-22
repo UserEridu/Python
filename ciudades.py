@@ -24,8 +24,20 @@ def main () -> None:
         ciudad = leer_texto(f'Ingresa {avisos[i]} ciudad', 'ciudad')
         ciudades.append(ciudad)
         
-        encabezado('mostrar ciudades', 46)
-        for ciudad in ciudades:
-            print(f'La ciudad es {ciudad.upper()}')
-
+    ver_ciudades('mostrar ciudades', 46, ciudades)
+    
+        
+    ciudades.sort()
+    ver_ciudades('ciudades ascendente', 46, ciudades)
+    
+        
+    ciudades.sort(reverse=True)
+    ver_ciudades('ciudades descendente', 46, ciudades)
+    
+        
+def ver_ciudades(titulo: str, largo: int, ciudades: list) -> None:
+    encabezado(titulo, largo)
+    for ciudad in ciudades: 
+        print(f'La ciudad es {ciudad.upper()}')
+        
 main()
